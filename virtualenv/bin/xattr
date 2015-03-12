@@ -1,0 +1,10 @@
+#!/home/khc/Code/bounce/swiftproxy/swift-tests/virtualenv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'xattr==0.7.5','console_scripts','xattr'
+__requires__ = 'xattr==0.7.5'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('xattr==0.7.5', 'console_scripts', 'xattr')()
+    )
