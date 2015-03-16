@@ -36,6 +36,11 @@ import test.functional as tf
 from test.functional.swift_test_client import Account, Connection, File, \
     ResponseError
 
+import logging
+
+logging.getLogger().setLevel(logging.DEBUG)
+logging.getLogger("swiftclient").setLevel(logging.DEBUG)
+logging.getLogger("swiftclient").addHandler(logging.StreamHandler())
 
 class Utils(object):
     @classmethod
