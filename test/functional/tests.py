@@ -85,7 +85,6 @@ class Base(unittest.TestCase):
             'Status returned: %d Expected: %s' %
             (self.env.conn.response.status, status_or_statuses))
 
-
 class Base2(object):
     def setUp(self):
         Utils.create_name = Utils.create_utf8_name
