@@ -708,6 +708,7 @@ class TestContainerPathsEnv(object):
         ]
 
         stored_files = set()
+
         for f in cls.files:
             file_item = cls.container.file(f)
             if f.endswith('/'):
@@ -747,6 +748,7 @@ class TestContainerPaths(Base):
                     found_files.append(file_item)
 
         recurse_path('')
+
         for file_item in self.env.stored_files:
             if file_item.startswith('/'):
                 self.assertNotIn(file_item, found_dirs)
@@ -788,7 +790,7 @@ class TestContainerPaths(Base):
                 self.assertIn('last_modified', file_item)
                 if file_item['name'].endswith('/'):
                     self.assertEqual(file_item['content_type'],
-                                     'application/directory')
+                                     'application/directory', file_item['name'])
 
     def testStructure(self):
         def assert_listing(path, file_list):
