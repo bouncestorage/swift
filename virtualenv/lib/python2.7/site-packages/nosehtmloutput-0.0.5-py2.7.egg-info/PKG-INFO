@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: nosehtmloutput
+Version: 0.0.5
+Summary: Nose plugin to produce test results in html.
+Home-page: https://github.com/openstack-infra/nose-html-output
+Author: Hewlett-Packard Development Company, L.P.
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Topic :: Software Development :: Testing
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

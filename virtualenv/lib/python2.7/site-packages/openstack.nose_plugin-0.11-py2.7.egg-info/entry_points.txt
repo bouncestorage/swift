@@ -1,0 +1,5 @@
+
+      # -*- Entry points: -*-
+[nose.plugins.0.10]
+openstack.nose_plugin = openstack.nose_plugin:Openstack
+      

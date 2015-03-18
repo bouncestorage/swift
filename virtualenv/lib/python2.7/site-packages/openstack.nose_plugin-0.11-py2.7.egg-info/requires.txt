@@ -1,0 +1,3 @@
+nose
+colorama
+termcolor
