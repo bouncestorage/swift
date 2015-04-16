@@ -521,7 +521,6 @@ def get_cluster_info():
     # even if the /info call failed, or when they are overridden by values
     # from the swift-constraints section of test.conf
     cluster_info['swift'] = eff_constraints
-    cluster_info['slo'] = get_config('slo')
 
 
 def setup_package():
