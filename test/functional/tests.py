@@ -2196,15 +2196,6 @@ class TestSloEnv(object):
             parms={'multipart-manifest': 'put'})
         cls.seg_info = seg_info
 
-        file_item = cls.container.file("manifest-db")
-        file_item.write(
-            json.dumps([
-                {'path': seg_info['seg_d']['path'], 'etag': None,
-                 'size_bytes': None},
-                {'path': seg_info['seg_b']['path'], 'etag': None,
-                 'size_bytes': None},
-            ]), parms={'multipart-manifest': 'put'})
-
 
 class TestSlo(Base):
     env = TestSloEnv
@@ -2519,6 +2510,15 @@ class TestSlo(Base):
             self.fail("GET with multipart-manifest=get got invalid json")
 
     def test_slo_get_the_manifest_with_details_from_server(self):
+        file_item = cls.container.file("manifest-db")
+        file_item.write(
+            json.dumps([
+                {'path': seg_info['seg_d']['path'], 'etag': None,
+                 'size_bytes': None},
+                {'path': seg_info['seg_b']['path'], 'etag': None,
+                 'size_bytes': None},
+            ]), parms={'multipart-manifest': 'put'})
+
         manifest = self.env.container.file("manifest-db")
         got_body = manifest.read(parms={'multipart-manifest': 'get'})
 
