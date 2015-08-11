@@ -1535,7 +1535,7 @@ class TestFile(Base):
             file_item = self.env.container.file(Utils.create_name())
             data = file_item.write_random()
             self.assert_status(201)
-            self.assertTrue(data == file_item.read())
+            self.assertEqual(file_item.read(), data)
             self.assert_status(200)
 
     def testHead(self):
